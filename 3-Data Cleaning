@@ -1,0 +1,29 @@
+#Data Cleaning: 1-Handle Missing Values 2-Fix Data Types 3-Remove Duplicates 4-Standardize Column Names 5-Outlier Detection
+
+from pyspark.sql.functions import col, isnan, when, count
+
+crime_rate_df.select([count(when(isnan(c) | col(c).isNull(), c)).alias(c) for c in crime_rate_df.columns]).show()
+
+edu_income_df.select([count(when(isnan(c) | col(c).isNull(), c)).alias(c) for c in edu_income_df.columns]).show()
+
+crime_rate_df = crime_rate_df.dropna(subset=['crimeIndex', 'pop2023'])
+edu_income_df = edu_income_df.dropna(subset=['education_index'])  
+
+
+crime_rate_df = crime_rate_df.withColumnRenamed('Crime Index', 'crimeIndex')
+edu_income_df = edu_income_df.withColumnRenamed('Education Index', 'education_index')
+
+
+crime_rate_df = crime_rate_df.dropDuplicates()
+edu_income_df = edu_income_df.dropDuplicates()
+
+
+crime_rate_df = crime_rate_df.withColumn('crimeIndex', col('crimeIndex').cast('double'))
+crime_rate_df = crime_rate_df.withColumn('pop2023', col('pop2023').cast('double'))
+edu_income_df = edu_income_df.withColumn('education_index', col('education_index').cast('double'))
+
+crime_rate_df = crime_rate_df.filter((col('crimeIndex') >= 0) & (col('crimeIndex') <= 100))
+
+
+crime_rate_df.show(5)
+edu_income_df.show(5)
