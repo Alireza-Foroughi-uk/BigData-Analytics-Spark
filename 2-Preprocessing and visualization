@@ -1,3 +1,0 @@
-display(dbutils.fs.ls("/mnt/datasets"))
-crime_df = spark.read.csv("/mnt/datasets/crime-rate-by-country-2023.csv", header=True, inferSchema=True)
-crime_df.show(5)
