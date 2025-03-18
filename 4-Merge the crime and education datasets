@@ -1,0 +1,8 @@
+#Merge the crime and education datasets for deeper correlation analysis
+merged_df = pd.merge(crime_rate_pd, edu_income_pd, on='country', how='inner')
+
+
+print(merged_df.info())
+print(merged_df.head())
+
+print(merged_df.isnull().sum())
