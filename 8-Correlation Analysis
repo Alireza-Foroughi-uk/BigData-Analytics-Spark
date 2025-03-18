@@ -1,0 +1,11 @@
+#Correlation Heatmap (Full Dataset)
+plt.figure(figsize=(10, 7))
+corr = merged_df[['crimeIndex', 'education_index', 'pop2023']].corr()
+sns.heatmap(
+    corr, 
+    annot=True, 
+    cmap='magma', 
+    linewidths=0.5
+)
+plt.title('Correlation Heatmap (Crime, Education, Population)', fontsize=18)
+plt.show()
