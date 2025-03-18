@@ -1,0 +1,21 @@
+#First basic visualisation after merging datasets
+top_10_pop = merged_df.sort_values(by='pop2023', ascending=False).head(10)
+
+
+plt.figure(figsize=(12, 8))
+sns.barplot(
+    x='crimeIndex', 
+    y='country', 
+    data=top_10_pop, 
+    palette='Reds_r'
+)
+plt.title('Top 10 Populated Countries with Highest Crime Index (2023)', fontsize=18)
+plt.xlabel('Crime Index', fontsize=14)
+plt.ylabel('Country', fontsize=14)
+plt.grid(axis='x', linestyle='--', linewidth=0.5)
+
+
+for index, value in enumerate(top_10_pop['crimeIndex']):
+    plt.text(value - 5, index, f'{value:.2f}', color='white', fontsize=12)
+
+plt.show()
