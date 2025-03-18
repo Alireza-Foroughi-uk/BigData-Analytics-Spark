@@ -14,3 +14,22 @@ asia_df = merged_df[merged_df['region'] == 'Asia']
 
 print("Europe Data:\n", europe_df.head())
 print("Asia Data:\n", asia_df.head())
+
+
+#Scatter Plot (Crime vs. Education by Region)
+plt.figure(figsize=(14, 8))
+sns.scatterplot(
+    x='education_index', 
+    y='crimeIndex', 
+    hue='region', 
+    data=merged_df[(merged_df['region'] == 'Europe') | (merged_df['region'] == 'Asia')], 
+    s=100, 
+    alpha=0.8, 
+    palette='Dark2'
+)
+plt.title('Crime Index vs. Education Index (Europe vs. Asia)', fontsize=18)
+plt.xlabel('Education Index', fontsize=14)
+plt.ylabel('Crime Index', fontsize=14)
+plt.legend(title='Region')
+plt.grid(True, linestyle='--', linewidth=0.5)
+plt.show()
