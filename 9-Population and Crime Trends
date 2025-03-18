@@ -1,0 +1,15 @@
+#Population vs. Crime Index (Scatter with Trend Line)
+plt.figure(figsize=(12, 8))
+sns.regplot(
+    x='pop2023', 
+    y='crimeIndex', 
+    data=merged_df, 
+    scatter_kws={'s': 70, 'alpha': 0.7}, 
+    line_kws={'color': 'orange'}
+)
+plt.title('Crime Index vs. Population (2023)', fontsize=18)
+plt.xlabel('Population (Log Scale)', fontsize=14)
+plt.ylabel('Crime Index', fontsize=14)
+plt.xscale('log')  # Log scale for better visualization
+plt.grid(True, linestyle='--', linewidth=0.5)
+plt.show()
