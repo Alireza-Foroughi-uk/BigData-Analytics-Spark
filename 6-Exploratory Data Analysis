@@ -1,0 +1,16 @@
+#Exploratory Data Analysis for example : Europe and Asia
+region_mapping = {
+    'Germany': 'Europe', 'France': 'Europe', 'Italy': 'Europe',
+    'Japan': 'Asia', 'India': 'Asia', 'China': 'Asia',
+    'Brazil': 'Americas', 'Argentina': 'Americas',
+    'South Africa': 'Africa', 'Nigeria': 'Africa'
+}
+
+
+merged_df['region'] = merged_df['country'].map(region_mapping)
+
+europe_df = merged_df[merged_df['region'] == 'Europe']
+asia_df = merged_df[merged_df['region'] == 'Asia']
+
+print("Europe Data:\n", europe_df.head())
+print("Asia Data:\n", asia_df.head())
