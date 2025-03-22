@@ -1,13 +1,7 @@
-1-Crime & Socioeconomic Data Analysis: Investigated relationships between crime rates, education
-indices, and income levels using Apache Spark and Azure Databricks.
+Title: Big Data Analysis with Apache Spark & Azure Databricks
 
-2-Data Cleaning & Transformation: Carried out sophisticated data analysis, transformation, and cleaning
-to reveal societal trends.
+Objective: Investigate crime & socioeconomic trends using big data
 
-3-Data Visualization for Insights: To illustrate trends, such as the relationship between crime rates and
-educational attainment, interactive data visualizations were created.
+Tech Stack: Python, Apache Spark, Azure Databricks
 
-4-Policy Recommendations: Suggested effective ways to enhance educational institutions in order to
-lower crime rates worldwide.
-
-Skills: Apache Spark · Azure Databricks
+How to Run: Explain dataset, dependencies, and execution
