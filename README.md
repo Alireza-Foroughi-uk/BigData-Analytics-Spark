@@ -1,4 +1,4 @@
-#Big Data & Infrastructure Project 🌍📊🔍
+**Big Data & Infrastructure Project 🌍📊🔍**
 
 Welcome to "Analyzing Crime and Education Data through a Data Lake Environment", a powerhouse project blending big data analytics with real-world impact! 🎯 Crafted by Alireza Foroughi at Ulster University’s London Campus, this project dives deep into the interplay of crime, education, and income using cutting-edge tools. 💡✨
 Project Overview 📋
