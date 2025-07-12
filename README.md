@@ -10,7 +10,8 @@ Project Overview 📋
         Apache Spark 🔥
         Azure Databricks ☁️
         Azure Blob Storage 📦
-    Goal: 🎯
+        
+ Goal: 🎯
     Identify patterns to boost safety and development, with a spotlight on regional differences like Asia vs. Europe! 🌏
 
 Why This Matters 🌟
@@ -30,12 +31,14 @@ How It Works ⚙️
     Apache Spark’s PySpark handled preprocessing, cleaning (bye-bye nulls!), and aggregation, making sense of millions of data points.
     Visual Insights: 📈
     Created stunning visuals—scatter plots, box plots, bar charts, and heatmaps—to reveal trends like Asia’s crime variability and Europe’s stability.
-    Key Findings: 🔎
-        Higher crime ties to lower education across regions.
-        Income heavily influences crime, with education as a key mitigator.
-        Population size? Less of a factor than income and education!
+    
+Key Findings: 🔎
+    
+    Higher crime ties to lower education across regions.
+    Income heavily influences crime, with education as a key mitigator.
+    Population size? Less of a factor than income and education!
 
-        Tech Highlights 🌟
+Tech Highlights 🌟
 
     Scalability: 🔥 PySpark’s distributed computing handled large datasets with ease.
     Integration: Azure Databricks and Blob Storage created a smooth, efficient workflow.
@@ -50,7 +53,7 @@ Results & Insights 📊
     Policy Wins: 🏆
     Recommendations for targeted education investments in high-crime, low-income zones—let’s make a difference!
 
-    References 📚
+ References 📚
 
     Kaggle Datasets: Crime Rate, Income & Education.
     Azure Docs: Blob Storage.
